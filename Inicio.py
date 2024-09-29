@@ -14,10 +14,10 @@ import psycopg2
 from pivottablejs import pivot_ui
 # Parámetros de conexión
 database_params = {
-    'host': 'localhost',
-    'database': 'DBANALISISPRES',
-    'user': 'postgres',
-    'password': '123456',
+    'host': 'dpg-crsbjetds78s73e3d0f0-a.ohio-postgres.render.com',
+    'database': 'gastoseguro',
+    'user': 'rmanzanedav',
+    'password': 'ZG7LFQBeEdQQxxZONAJCgV8Fcm2Y8ts1',
     'port': '5432',  # Puerto predeterminado de PostgreSQL
 }
 conn = psycopg2.connect(**database_params)
