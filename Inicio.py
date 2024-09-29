@@ -61,7 +61,10 @@ with col2:
 
 
 tipo_dato=st.selectbox('Seleccion el tipo', ['Todos','Inversion','Gasto','Recurso'],placeholder='Seleccione el tipo')
-data2['fecha'] = data2['fecha'].dt.tz_localize(None)
+##data2['fecha'] = data2['fecha'].dt.tz_localize(None)
+st.write(data2['fecha'].dtype) 
+date1 = date1.tz_localize('UTC-04:00')  # Cambia esto a la zona horaria correcta
+date2 = date2.tz_localize('UTC-04:00')  # Cambia esto a la zona horaria correcta
 datos_filtrados = data2[(pd.to_datetime(data2["fecha"]) >= date1) & (pd.to_datetime(data2["fecha"])<= date2)].copy()
 
 chart_recurso=alt.Chart(datos_filtrados).mark_line(color='red').encode(
