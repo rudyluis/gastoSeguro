@@ -70,6 +70,8 @@ with col2:
 tipo_dato=st.selectbox('Seleccion el tipo', ['Todos','Inversion','Gasto','Recurso'],placeholder='Seleccione el tipo')
 ##quit()
 ##data2['fecha'] = data2['fecha'].dt.tz_localize(None)
+date1 = pd.to_datetime(date1)  # Asegúrate de que sean datetime
+date2 = pd.to_datetime(date2)  # Asegúrate de que sean datetime
 datos_filtrados = data2[(data2["fecha"] >= date1) & (data2["fecha"]<= date2)].copy()
 
 chart_recurso=alt.Chart(datos_filtrados).mark_line(color='red').encode(
