@@ -20,7 +20,7 @@ database_params = {
     'password': 'ZG7LFQBeEdQQxxZONAJCgV8Fcm2Y8ts1',
     'port': '5432',  # Puerto predeterminado de PostgreSQL
 }
-##conn = psycopg2.connect(**database_params)
+conn = psycopg2.connect(**database_params)
 # Crear una conexión utilizando SQLAlchemy
 ##engine = create_engine(f'postgresql://{database_params["user"]}:{database_params["password"]}@{database_params["host"]}:{database_params["port"]}/{database_params["database"]}')
 
