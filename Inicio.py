@@ -14,7 +14,7 @@ import psycopg2
 from pivottablejs import pivot_ui
 # Parámetros de conexión
 database_params = {
-    'host': 'dpg-crsbjetds78s73e3d0f0-a.ohio-postgres.render.com',
+        'host': 'dpg-crsbjetds78s73e3d0f0-a.ohio-postgres.render.com',
     'database': 'gastoseguro',
     'user': 'rmanzanedav',
     'password': 'ZG7LFQBeEdQQxxZONAJCgV8Fcm2Y8ts1',
@@ -25,12 +25,10 @@ conn = psycopg2.connect(**database_params)
 ##engine = create_engine(f'postgresql://{database_params["user"]}:{database_params["password"]}@{database_params["host"]}:{database_params["port"]}/{database_params["database"]}')
 
 # Ejecutar una consulta y cargar los resultados en un DataFrame de Pandas
-query = "select * from ejecucion where gestion_presupuestaria::integer>=2019"
+query = "select * from ejecucion"
 
 ##data = pd.read_sql_query(query, conn)
-##data.to_csv('df/ejecucion.csv', index=False)
 
-##data = pd.read_csv('df/ejecucion.csv',delimiter=',',on_bad_lines='skip', encoding='ISO-8859-1')
 st.set_page_config(page_title="CMI GASTO SEGURO", page_icon="📈",layout="wide")
 
 st.title("📈 GASTO SEGURO")
@@ -43,9 +41,7 @@ st.subheader("""💵Tabla Ejecución  """)
 
 query2 = "select * from ejecucion_mes"
 
-##data2 = pd.read_sql_query(query2, conn)
-##data2.to_csv('df/ejecucion_mes.csv', index=False)
-data2 = pd.read_csv('df/ejecucion_mes.csv',delimiter=',',on_bad_lines='skip', encoding='ISO-8859-1')
+data2 = pd.read_sql_query(query2, conn)
 data2['fecha']=pd.to_datetime(data2['fecha'])
 
 
@@ -54,9 +50,6 @@ st.divider()
 st.subheader(""" 💹 Grafica de Ejecución   """)
 col1, col2 = st.columns((2))
 # Getting the min and max date 
-
-
-
 startDate = pd.to_datetime(data2["fecha"]).min()
 endDate = pd.to_datetime(data2["fecha"]).max()
 
@@ -68,11 +61,8 @@ with col2:
 
 
 tipo_dato=st.selectbox('Seleccion el tipo', ['Todos','Inversion','Gasto','Recurso'],placeholder='Seleccione el tipo')
-##quit()
-##data2['fecha'] = data2['fecha'].dt.tz_localize(None)
-date1 = pd.to_datetime(date1)  # Asegúrate de que sean datetime
-date2 = pd.to_datetime(date2)  # Asegúrate de que sean datetime
-datos_filtrados = data2[(data2["fecha"] >= date1) & (data2["fecha"]<= date2)].copy()
+data2['fecha'] = data2['fecha'].dt.tz_localize(None)
+datos_filtrados = data2[(pd.to_datetime(data2["fecha"]) >= date1) & (pd.to_datetime(data2["fecha"])<= date2)].copy()
 
 chart_recurso=alt.Chart(datos_filtrados).mark_line(color='red').encode(
         x=alt.X('fecha:T',axis=alt.Axis(title='Fecha')),
