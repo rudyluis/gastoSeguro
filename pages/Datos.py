@@ -16,10 +16,10 @@ import plotly.express as px
 import calendar
 # Parámetros de conexión
 database_params = {
-    'host': 'dpg-crsbjetds78s73e3d0f0-a.ohio-postgres.render.com',
-    'database': 'gastoseguro',
-    'user': 'rmanzanedav',
-    'password': 'ZG7LFQBeEdQQxxZONAJCgV8Fcm2Y8ts1',
+    'host': 'localhost',
+    'database': 'DBANALISISPRES',
+    'user': 'postgres',
+    'password': '123456',
     'port': '5432',  # Puerto predeterminado de PostgreSQL
 }
 conn = psycopg2.connect(**database_params)
@@ -27,7 +27,7 @@ conn = psycopg2.connect(**database_params)
 ##engine = create_engine(f'postgresql://{database_params["user"]}:{database_params["password"]}@{database_params["host"]}:{database_params["port"]}/{database_params["database"]}')
 
 # Ejecutar una consulta y cargar los resultados en un DataFrame de Pandas
-query = "select * from ejecucion order by proyecto,gestion_presupuestaria"
+query = "select * from ejecucion  where gestion_presupuestaria::integer>=2019 order by proyecto,gestion_presupuestaria "
 
 data = pd.read_sql_query(query, conn)
 datos=data.copy()
