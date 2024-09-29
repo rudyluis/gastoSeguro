@@ -14,7 +14,7 @@ import psycopg2
 from pivottablejs import pivot_ui
 # Parámetros de conexión
 database_params = {
-      'host': 'dpg-crsbjetds78s73e3d0f0-a.ohio-postgres.render.com',
+    'host': 'dpg-crsbjetds78s73e3d0f0-a.ohio-postgres.render.com',
     'database': 'gastoseguro',
     'user': 'rmanzanedav',
     'password': 'ZG7LFQBeEdQQxxZONAJCgV8Fcm2Y8ts1',
@@ -54,6 +54,9 @@ st.divider()
 st.subheader(""" 💹 Grafica de Ejecución   """)
 col1, col2 = st.columns((2))
 # Getting the min and max date 
+
+
+
 startDate = pd.to_datetime(data2["fecha"]).min()
 endDate = pd.to_datetime(data2["fecha"]).max()
 
