@@ -1,0 +1,13 @@
+streamlit
+altair
+pandas
+scikit-learn
+psycopg2
+pivottablejs
+plotly-express
+numpy
+matplotlib
+seaborn
+statsmodels
+streamlit-aggrid
+ipython

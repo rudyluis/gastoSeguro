@@ -1,0 +1,119 @@
+Resultados para el Proyecto Planta Trinidad:
+MSE: 5538046881909.45
+R^2: 16.07182398691618
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1: 1.0
+roc_auc: nan
+cv_scores: [-0.1481832  -0.77079012 -0.69326733 -4.71999866 -7.14143259]
+Coeficientes: [745363.16216788]
+Intercepto: 2740323.66
+=======================================
+Resultados para el Proyecto La Belgica Los Troncos:
+MSE: 176751346048433.38
+R^2: 0.42835457729502735
+Accuracy: 0.6153846153846154
+Precision: 0.8888888888888888
+Recall: 0.6666666666666666
+F1: 0.761904761904762
+roc_auc: 0.6666666666666666
+cv_scores: [-3.48519764  0.6616639   0.39340188  0.10864387  0.44815403]
+Coeficientes: [-10245681.23551134]
+Intercepto: 13851749.944800003
+=======================================
+Resultados para el Proyecto Linea de Transmision Cochabamba:
+MSE: 231924508319883.2
+R^2: 1.215263407730177
+Accuracy: 0.7
+Precision: 0.7777777777777778
+Recall: 0.875
+F1: 0.823529411764706
+roc_auc: 0.5
+cv_scores: [ 1.27333125e-01 -4.99885586e+03  2.93669393e-01  1.80553548e-02
+ -1.66307280e+01]
+Coeficientes: [14543400.0273523]
+Intercepto: 13141809.628421046
+=======================================
+Resultados para el Proyecto Equip.Transf.de Potencia de 25 MVA Subestacion Yucumo-Beni:
+MSE: 6315578476101.366
+R^2: 0.9153250034814777
+Accuracy: 0.6666666666666666
+Precision: 0.6666666666666666
+Recall: 1.0
+F1: 0.8
+roc_auc: 0.0
+cv_scores: [-2.93324868e+04 -1.68674338e-01 -5.59997444e+00 -1.33504060e+00
+ -2.14109777e+01]
+Coeficientes: [389958.35195417]
+Intercepto: 1198114.185
+=======================================
+Resultados para el Proyecto Huanuni:
+MSE: 1415145086.546782
+R^2: 0.1536234140172854
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1: 1.0
+roc_auc: nan
+cv_scores: [-2.46418052e-01 -6.57325280e+01 -5.99776200e-02 -1.97243473e+00
+ -1.38214663e+05]
+Coeficientes: [-7814.20591414]
+Intercepto: 19937.77291666667
+=======================================
+Resultados para el Proyecto Const.Linea de Transmision Interconexion Mataral al SIN:
+MSE: 5550094056.952733
+R^2: 0.26071850603026747
+Accuracy: 0.8333333333333334
+Precision: 0.8333333333333334
+Recall: 1.0
+F1: 0.9090909090909091
+roc_auc: 0.2
+cv_scores: [ -0.21386598   0.74194359 -21.93942872  -0.49243639   0.19552575]
+Coeficientes: [32077.74055463]
+Intercepto: 65486.0871428571
+=======================================
+Resultados para el Proyecto Const.Obras Complementarias Central Hidroelectrica Misicuni:
+MSE: 9909362143156.062
+R^2: 0.2387945774255209
+Accuracy: 0.75
+Precision: 0.75
+Recall: 1.0
+F1: 0.8571428571428571
+roc_auc: 0.3333333333333333
+cv_scores: [-0.17610371 -0.81278885 -0.71039905 -0.54811548 -0.52690814]
+Coeficientes: [-116195.4018531]
+Intercepto: 790491.2992857145
+=======================================
+Resultados para el Proyecto Linea de transmisión San José Santivañez:
+MSE: 149646420817206.62
+R^2: 0.02530234123452535
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1: 1.0
+roc_auc: nan
+cv_scores: [-0.08527457  0.00775918 -0.0179725  -0.09933315 -3.81323752]
+Coeficientes: [748017.86806828]
+Intercepto: 9688646.563333334
+=======================================
+Resultados para el Proyecto Const.Linea de Transmision Interconexion San Ignacio de Velazco y San Matias:
+MSE: 1895007134248.8826
+R^2: 1112.249244798702
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1: 1.0
+roc_auc: nan
+cv_scores: [-4.15263128e+01 -8.09662810e-02 -1.77234195e-01 -4.37509070e-03
+ -7.76676557e-02]
+Coeficientes: [69953.1431211]
+Intercepto: 1409313.3739534884
+=======================================
+RESULTADOS OBTENIDOS
+=======================================
+MSE: 6466.16
+R2: 72.871673475917
+Accuracy: 0.8405982905982907
+Precision: 0.8796296296296295
+Recall: 0.949074074074074
