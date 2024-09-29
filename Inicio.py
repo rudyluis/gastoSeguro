@@ -27,10 +27,10 @@ database_params = {
 # Ejecutar una consulta y cargar los resultados en un DataFrame de Pandas
 query = "select * from ejecucion where gestion_presupuestaria::integer>=2019"
 
-##data = pd.read_sql_query(query, conn)
+data = pd.read_sql_query(query, conn)
 ##data.to_csv('df/ejecucion.csv', index=False)
 
-data = pd.read_csv('df/ejecucion.csv',delimiter=',',on_bad_lines='skip', encoding='ISO-8859-1')
+##data = pd.read_csv('df/ejecucion.csv',delimiter=',',on_bad_lines='skip', encoding='ISO-8859-1')
 st.set_page_config(page_title="CMI GASTO SEGURO", page_icon="📈",layout="wide")
 
 st.title("📈 GASTO SEGURO")
@@ -43,9 +43,9 @@ st.subheader("""💵Tabla Ejecución  """)
 
 query2 = "select * from ejecucion_mes"
 
-##data2 = pd.read_sql_query(query2, conn)
+data2 = pd.read_sql_query(query2, conn)
 
-data2 = pd.read_csv('df/ejecucion_mes.csv',delimiter=',',on_bad_lines='skip', encoding='ISO-8859-1')
+##data2 = pd.read_csv('df/ejecucion_mes.csv',delimiter=',',on_bad_lines='skip', encoding='ISO-8859-1')
 data2['fecha']=pd.to_datetime(data2['fecha'])
 
 
