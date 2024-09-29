@@ -43,9 +43,9 @@ st.subheader("""💵Tabla Ejecución  """)
 
 query2 = "select * from ejecucion_mes"
 
-data2 = pd.read_sql_query(query2, conn)
-
-##data2 = pd.read_csv('df/ejecucion_mes.csv',delimiter=',',on_bad_lines='skip', encoding='ISO-8859-1')
+##data2 = pd.read_sql_query(query2, conn)
+##data2.to_csv('df/ejecucion_mes.csv', index=False)
+data2 = pd.read_csv('df/ejecucion_mes.csv',delimiter=',',on_bad_lines='skip', encoding='ISO-8859-1')
 data2['fecha']=pd.to_datetime(data2['fecha'])
 
 
