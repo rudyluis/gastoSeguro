@@ -27,7 +27,7 @@ conn = psycopg2.connect(**database_params)
 # Ejecutar una consulta y cargar los resultados en un DataFrame de Pandas
 query = "select * from ejecucion where gestion_presupuestaria::integer>=2019"
 
-data = pd.read_sql_query(query, conn)
+##data = pd.read_sql_query(query, conn)
 ##data.to_csv('df/ejecucion.csv', index=False)
 
 ##data = pd.read_csv('df/ejecucion.csv',delimiter=',',on_bad_lines='skip', encoding='ISO-8859-1')
